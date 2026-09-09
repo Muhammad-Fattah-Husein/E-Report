@@ -5,7 +5,7 @@ body {
 }
 
 #hero .col img {
-  width: 34.8%;
+  width: 500px;
 }
 
 section{
@@ -21,4 +21,7 @@ section{
   .hero .col img{
     width: 100%;
   }
+  #hero .col img {
+  width: 80%;
+}
 }
