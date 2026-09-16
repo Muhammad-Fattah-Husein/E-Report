@@ -4,6 +4,10 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 #hero .col img {
   width: 500px;
 }
@@ -15,6 +19,10 @@ section{
 
 .about .col img{
   width: 50%;
+}
+
+.copyright{
+  margin-top: 100px;
 }
 
 @media screen and (max-width: 510px) {
