@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Report</title>
+    <link
+      rel="shortcut icon"
+      href="assets/images/IDN LOGO.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+    <!-- CSS Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+      integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- CSS Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Animate Style -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <nav
+        class="navbar navbar-expand-lg bg-primary-subtle animate__animated animate__fadeInDown"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="#"
+            ><img
+              src="assets/images/IDN LOGO.png"
+              alt=""
+              width="30"
+              class="d-inline-block align-text-top rounded bg-white"
+            /><span class="fw-bold text-primary-emphasis">IDN E-Report</span></a
+          >
+          <button
+            class="navbar-toggler shadow-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link text-primary-emphasis"
+                  href="index.html#navbar"
+                  >Halaman Utama</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-primary-emphasis"
+                  href="index.html#about"
+                  >Tentang Kami</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link text-primary-emphasis dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Lainnya
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="index.html#services"
+                      >Layanan Kami</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="index.html#recent"
+                      >Laporan Terbaru</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="index.html#faq">FAQ</a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#kontak">Kontak Kami</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-primary" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- All Reports -->
+    <section id="reports">
+      <div class="container">
+        <!-- Header -->
+        <div class="mb-4 text-center">
+          <h1
+            class="fw-bold text-primary-emphasis"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            Semua Laporan
+          </h1>
+          <p
+            class="lh-lg text-muted"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+          >
+            Gunakan fitur pencarian untuk menemukan laporan yang telah dibuat
+            dengan cepat. Masukkan ID laporan, judul laporan, atau kata kunci
+            yang berkaitan dengan pengaduan yang ingin kamu cari.
+          </p>
+        </div>
+
+        <!-- Filter & Search -->
+        <div class="row mb-4 g-2 align-content-center">
+          <div class="col-lg-4 col-md-6 mb-3">
+            <input
+              type="text"
+              class="form-control shadow-sm"
+              placeholder="Cari laporan..."
+            />
+          </div>
+          <div class="col-lg-3 col-md-6 mb-3">
+            <select class="form-select shadow-sm">
+              <option selected>Filter Kategori</option>
+              <option value="fasilitas">Fasilitas</option>
+              <option value="asrama">Asrama</option>
+              <option value="akademik">Akademik</option>
+            </select>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-3">
+            <select class="form-select shadow-sm">
+              <option selected>Urutkan</option>
+              <option value="newest">Terbaru</option>
+              <option value="oldest">Terlama</option>
+              <option value="popular">Terpopuler</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-primary w-100 shadow-sm">
+              <i class="fa-solid fa-filter"></i>
+              Filter
+            </button>
+          </div>
+        </div>
+
+        <!-- all Reports -->
+        <div class="service row">
+          <div class="col-sm-12 col-lg-4 col-md-6 mb-3 rounded-5">
+            <div class="card">
+              <div
+                class="position-absolute px-3 py-2"
+                style="background-color: rgba(0, 0, 0, 0.4)"
+              >
+                <a href="" class="text-decoration-none text-white">Akademik</a>
+              </div>
+              <img
+                src="assets/images/meja-rusak.jpg"
+                alt=""
+                style="height: 350px; object-fit: cover"
+                class="rounded-2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Broken Table</h5>
+                <p class="mb-4">
+                  <small>
+                    By:
+                    <a class="text-decoration-none" href="#"
+                      >Muhammad Bahlawan Ash-Shiddiq</a
+                    >
+                    2 day ago.</small
+                  >
+                </p>
+                <p class="card-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Perspiciatis tenetur magnam tempore fuga provident. Ut itaque
+                  labore nihil reprehenderit illum.
+                </p>
+                <a href="#" class="btn btn-primary">Go Somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-4 col-md-6 mb-3 rounded-5">
+            <div class="card">
+              <div
+                class="position-absolute px-3 py-2"
+                style="background-color: rgba(0, 0, 0, 0.4)"
+              >
+                <a href="" class="text-decoration-none text-white">Akademik</a>
+              </div>
+              <img
+                src="assets/images/kusi-rusak.jpg"
+                alt=""
+                style="height: 350px; object-fit: cover"
+                class="rounded-2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Broken Chair</h5>
+                <p class="mb-4">
+                  <small
+                    >By:
+                    <a class="text-decoration-none" href="#"
+                      >Ryu Fauzan Yusuf</a
+                    >
+                    2 day ago.</small
+                  >
+                </p>
+                <p class="card-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Perspiciatis tenetur magnam tempore fuga provident. Ut itaque
+                  labore nihil reprehenderit illum.
+                </p>
+                <a href="#" class="btn btn-primary">Go Somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-4 col-md-6 mb-3 rounded-5">
+            <div class="card">
+              <div
+                class="position-absolute px-3 py-2"
+                style="background-color: rgba(0, 0, 0, 0.4)"
+              >
+                <a href="" class="text-decoration-none text-white">Akademik</a>
+              </div>
+              <img
+                src="assets/images/papan-tulis.jpg"
+                alt=""
+                style="height: 350px; object-fit: cover"
+                class="rounded-2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Broken White Board</h5>
+                <p class="mb-4">
+                  <small
+                    >By:
+                    <a class="text-decoration-none" href="#"
+                      >Muhammad Nadhif Hasan</a
+                    >
+                    2 day ago.</small
+                  >
+                </p>
+                <p class="card-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Perspiciatis tenetur magnam tempore fuga provident. Ut itaque
+                  labore nihil reprehenderit illum.
+                </p>
+                <a href="#" class="btn btn-primary">Go Somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-4 col-md-6 mb-3 rounded-5">
+            <div class="card">
+              <div
+                class="position-absolute px-3 py-2"
+                style="background-color: rgba(0, 0, 0, 0.4)"
+              >
+                <a href="" class="text-decoration-none text-white">Akademik</a>
+              </div>
+              <img
+                src="assets/images/papan-tulis.jpg"
+                alt=""
+                style="height: 350px; object-fit: cover"
+                class="rounded-2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Broken White Board</h5>
+                <p class="mb-4">
+                  <small
+                    >By:
+                    <a class="text-decoration-none" href="#"
+                      >Muhammad Nadhif Hasan</a
+                    >
+                    2 day ago.</small
+                  >
+                </p>
+                <p class="card-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Perspiciatis tenetur magnam tempore fuga provident. Ut itaque
+                  labore nihil reprehenderit illum.
+                </p>
+                <a href="#" class="btn btn-primary">Go Somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-4 col-md-6 mb-3 rounded-5">
+            <div class="card">
+              <div
+                class="position-absolute px-3 py-2"
+                style="background-color: rgba(0, 0, 0, 0.4)"
+              >
+                <a href="" class="text-decoration-none text-white">Akademik</a>
+              </div>
+              <img
+                src="assets/images/papan-tulis.jpg"
+                alt=""
+                style="height: 350px; object-fit: cover"
+                class="rounded-2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Broken White Board</h5>
+                <p class="mb-4">
+                  <small
+                    >By:
+                    <a class="text-decoration-none" href="#"
+                      >Muhammad Nadhif Hasan</a
+                    >
+                    2 day ago.</small
+                  >
+                </p>
+                <p class="card-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Perspiciatis tenetur magnam tempore fuga provident. Ut itaque
+                  labore nihil reprehenderit illum.
+                </p>
+                <a href="#" class="btn btn-primary">Go Somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-4 col-md-6 mb-3 rounded-5">
+            <div class="card">
+              <div
+                class="position-absolute px-3 py-2"
+                style="background-color: rgba(0, 0, 0, 0.4)"
+              >
+                <a href="" class="text-decoration-none text-white">Akademik</a>
+              </div>
+              <img
+                src="assets/images/papan-tulis.jpg"
+                alt=""
+                style="height: 350px; object-fit: cover"
+                class="rounded-2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Broken White Board</h5>
+                <p class="mb-4">
+                  <small
+                    >By:
+                    <a class="text-decoration-none" href="#"
+                      >Muhammad Nadhif Hasan</a
+                    >
+                    2 day ago.</small
+                  >
+                </p>
+                <p class="card-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Perspiciatis tenetur magnam tempore fuga provident. Ut itaque
+                  labore nihil reprehenderit illum.
+                </p>
+                <a href="#" class="btn btn-primary">Go Somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-4 col-md-6 mb-3 rounded-5">
+            <div class="card">
+              <div
+                class="position-absolute px-3 py-2"
+                style="background-color: rgba(0, 0, 0, 0.4)"
+              >
+                <a href="" class="text-decoration-none text-white">Akademik</a>
+              </div>
+              <img
+                src="assets/images/papan-tulis.jpg"
+                alt=""
+                style="height: 350px; object-fit: cover"
+                class="rounded-2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Broken White Board</h5>
+                <p class="mb-4">
+                  <small
+                    >By:
+                    <a class="text-decoration-none" href="#"
+                      >Muhammad Nadhif Hasan</a
+                    >
+                    2 day ago.</small
+                  >
+                </p>
+                <p class="card-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Perspiciatis tenetur magnam tempore fuga provident. Ut itaque
+                  labore nihil reprehenderit illum.
+                </p>
+                <a href="#" class="btn btn-primary">Go Somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-4 col-md-6 mb-3 rounded-5">
+            <div class="card">
+              <div
+                class="position-absolute px-3 py-2"
+                style="background-color: rgba(0, 0, 0, 0.4)"
+              >
+                <a href="" class="text-decoration-none text-white">Akademik</a>
+              </div>
+              <img
+                src="assets/images/papan-tulis.jpg"
+                alt=""
+                style="height: 350px; object-fit: cover"
+                class="rounded-2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Broken White Board</h5>
+                <p class="mb-4">
+                  <small
+                    >By:
+                    <a class="text-decoration-none" href="#"
+                      >Muhammad Nadhif Hasan</a
+                    >
+                    2 day ago.</small
+                  >
+                </p>
+                <p class="card-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Perspiciatis tenetur magnam tempore fuga provident. Ut itaque
+                  labore nihil reprehenderit illum.
+                </p>
+                <a href="#" class="btn btn-primary">Go Somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-4 col-md-6 mb-3 rounded-5">
+            <div class="card">
+              <div
+                class="position-absolute px-3 py-2"
+                style="background-color: rgba(0, 0, 0, 0.4)"
+              >
+                <a href="" class="text-decoration-none text-white">Akademik</a>
+              </div>
+              <img
+                src="assets/images/papan-tulis.jpg"
+                alt=""
+                style="height: 350px; object-fit: cover"
+                class="rounded-2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Broken White Board</h5>
+                <p class="mb-4">
+                  <small
+                    >By:
+                    <a class="text-decoration-none" href="#"
+                      >Muhammad Nadhif Hasan</a
+                    >
+                    2 day ago.</small
+                  >
+                </p>
+                <p class="card-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Perspiciatis tenetur magnam tempore fuga provident. Ut itaque
+                  labore nihil reprehenderit illum.
+                </p>
+                <a href="#" class="btn btn-primary">Go Somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+              <a class="page-link" href="#">Sebelumnya</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link active" href="#">1</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Setelahnya</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer
+      class="bg-primary"
+      style="padding-top: 50px; padding-bottom: 20px"
+      id="kontak"
+    >
+      <div class="container">
+        <div class="row justify-content-between row-gap-4">
+          <div class="col-md-4 text-white">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <img
+                src="assets/images/IDN LOGO.png"
+                alt="Logo IDN"
+                width="30"
+                class="d-inline-block align-text-center bg-white rounded"
+              />
+              <h2>E-Report</h2>
+            </div>
+            <p class="lh-lg opacity-75 m-0">
+              E-Report IDN merupakan platform pengaduan digital yang dirancang
+              untuk membantu siswa dan seluruh warga sekolah menyampaikan
+              laporan, keluhan, serta masukan mengenai berbagai permasalahan di
+              lingkungan sekolah. Melalui platform ini, setiap pengaduan dapat
+              disampaikan dengan lebih mudah, terstruktur, dan dapat dipantau
+              proses tindak lanjutnya.
+            </p>
+          </div>
+          <div class="col-md-4 d-flex flex-column gap-2">
+            <h4 class="fw-bold text-white">Menu</h4>
+            <a
+              class="footer-link text-white text-decoration-none"
+              href="index.html#navbar"
+              >Home</a
+            >
+            <a
+              class="footer-link text-white text-decoration-none"
+              href="index.html#about"
+              >Tentang Kami</a
+            >
+            <a
+              class="footer-link text-white text-decoration-none"
+              href="index.html#services"
+              >Layanan Kami</a
+            >
+            <a
+              class="footer-link text-white text-decoration-none"
+              href="index.html#recent"
+              >Laporan Terbaru</a
+            >
+            <a
+              class="footer-link text-white text-decoration-none"
+              href="index.html#faq"
+              >FAQ</a
+            >
+          </div>
+          <div class="col-md-4 d-flex flex-column gap-2 text-white">
+            <h4 class="fw-bold">Kontak Kami</h4>
+            <a
+              class="m-0 text-white text-decoration-none d-flex align-items-center gap-2"
+              href="mailto:muhammad.fattah.husein@gmail.com"
+              target="_blank"
+            >
+              <i class="fa-solid fa-envelope"></i
+              >muhammad.fattah.husein@gmail.com
+            </a>
+            <a
+              class="m-0 text-white text-decoration-none d-flex align-items-center gap-2"
+              href="https://wa.me/6282334142104"
+              target="_blank"
+            >
+              <i class="fa-solid fa-phone"></i>+62-823-3414-2104
+            </a>
+            <a
+              class="m-0 text-white text-decoration-none d-flex align-items-center gap-2"
+              href="https://maps.app.goo.gl/HamCPb4qKQTrazCr6"
+              target="_blank"
+            >
+              <i class="fa-solid fa-house"></i>Gg. Masjid II, RT.002/RW.003,
+              Jatiranggon, Kec. Jatisampurna, Kota Bks, Jawa Barat 17432
+            </a>
+          </div>
+        </div>
+        <div class="copyright text-center text-white">
+          <p>
+            &copy; Copyright by
+            <span class="fw-bold">Muhammad Fattah Husein</span> 2026, All Right
+            Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
