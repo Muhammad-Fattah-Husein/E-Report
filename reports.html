@@ -127,24 +127,38 @@
     <section id="reports">
       <div class="container">
         <!-- Header -->
-        <div class="mb-4 text-center">
-          <h1
-            class="fw-bold text-primary-emphasis"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-          >
-            Semua Laporan
-          </h1>
-          <p
-            class="lh-lg text-muted"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="300"
-          >
-            Gunakan fitur pencarian untuk menemukan laporan yang telah dibuat
-            dengan cepat. Masukkan ID laporan, judul laporan, atau kata kunci
-            yang berkaitan dengan pengaduan yang ingin kamu cari.
-          </p>
+        <div
+          class="d-flex justify-content-md-between justify-content-center align-items-center flex-wrap mb-4"
+        >
+          <div class="text-center text-md-start">
+            <h1
+              class="fw-bold text-primary-emphasis"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              Semua Laporan
+            </h1>
+            <p
+              class="lh-lg text-muted"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="300"
+            >
+              Gunakan fitur pencarian untuk menemukan laporan yang telah dibuat
+              dengan cepat. Masukkan ID laporan, judul laporan, atau kata kunci
+              yang berkaitan dengan pengaduan yang ingin kamu cari.
+            </p>
+          </div>
+          <div>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Lapor !
+            </button>
+          </div>
         </div>
 
         <!-- Filter & Search -->
@@ -526,6 +540,74 @@
           </div>
         </div>
 
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header bg-primary text-white">
+                <h1 class="modal-title fs-5 fw-semibold" id="exampleModalLabel">
+                  <i class="fa-solid fa-pen-nib"></i>
+                  Tambah Laporan
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close btn-close-white"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <form action="">
+                <div class="modal-body p-4">
+                  <div class="mb-3">
+                    <label for="" class="form-label fw-semibold">Judul Laporan</label>
+                    <input type="text" class="form-control" placeholder="Masukkan Judul Laporan" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label fw-semibold">Kategori</label>
+                    <select class="form-select" name="" id="">
+                      <option value="">Pilih Kategori</option>
+                      <option value="">Akademik</option>
+                      <option value="">Asrama</option>
+                      <option value="">Fasilitas</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="">Deskripsi Laporan</label>
+                    <textarea class="form-control" rows="4" name="" id="" placeholder="Tulis Laporan Anda"></textarea>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label fw-semibold" for="">Upload Foto</label>
+                    <input type="file" class="form-control" name="" id="" accept="image/*">
+                  </div>
+                </div>
+
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-warning"
+                    data-bs-dismiss="modal"
+                  >
+                    Tutup
+                  </button>
+
+                  <button type="" class="btn btn-primary">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Lapor
+                  </button>
+
+                </div>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
         <!-- Pagination -->
         <nav aria-label="Page navigation example">
           <ul class="pagination justify-content-center">
