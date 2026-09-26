@@ -144,46 +144,151 @@
             </p>
           </div>
         </div>
-        <div class="accordion" id="accordionExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button bg-primary text-white"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseOne"
-                aria-expanded="true"
-                aria-controls="collapseOne"
-              >
-                Cara Menambahkan Laporan
-              </button>
-            </h2>
-            <div
-              id="collapseOne"
-              class="accordion-collapse collapse"
-              data-bs-parent="#accordionExample"
-            >
-              <div class="accordion-body">
-                <div class="lh-lg">
-                  <span class="fw-bold">1.</span> Langkah pertama adalah menuju
-                  halaman Semua Laporan.
-                </div>
-                <div class="lh-lg">
-                    <span class="fw-bold">2.</span> Tekan tombol Lapor! yang ada di atas.
-                </div>
-                <div class="lh-lg">
-                    <span class="fw-bold">3.</span> Isi semua data yang diminta oleh form.
-                </div>
-                <div class="lh-lg">
-                    <span class="fw-bold">4.</span> Jika sudah selesai bisa tekan Lapor. Jika tidak jadi melapor bisa tekan tombol Tutup.
-                </div>
-                <div class="lh-lg">
-                    <span class="fw-bold">5.</span> Terakhir tinggal menunggu sampai direspons oleh admin dan pihak berwajib.
+        <!-- Detailed Step-by-Step Accordion -->
+          <div class="card border-0 shadow-sm rounded-4 p-4 mb-5">
+            <h4 class="fw-bold text-primary mb-4">Panduan Lengkap & Kebijakan</h4>
+            <div class="accordion" id="accordionGuide">
+              <!-- Accordion Item 1 -->
+              <div class="accordion-item border rounded-3 mb-3 overflow-hidden shadow-none">
+                <h2 class="accordion-header" id="headingGuideOne">
+                  <button
+                    class="accordion-button fw-semibold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseGuideOne"
+                    aria-expanded="true"
+                    aria-controls="collapseGuideOne"
+                  >
+                    <i class="fa-solid fa-circle-plus text-primary me-2"></i> 1. Langkah Menambahkan Laporan Baru
+                  </button>
+                </h2>
+                <div
+                  id="collapseGuideOne"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingGuideOne"
+                  data-bs-parent="#accordionGuide"
+                >
+                  <div class="accordion-body text-secondary lh-lg">
+                    <ol class="ps-3 mb-0">
+                      <li class="mb-2"><strong>Akses Menu Laporan:</strong> Buka halaman <a href="reports.html" class="text-decoration-none">Semua Laporan</a> melalui navigasi atas.</li>
+                      <li class="mb-2"><strong>Buka Modal Formulir:</strong> Klik tombol <em>"Buat Laporan Baru"</em> atau <em>"Lapor!"</em> yang tertera di bagian atas halaman.</li>
+                      <li class="mb-2"><strong>Lengkapi Identitas & Judul:</strong> Masukkan nama pelapor serta judul laporan yang ringkas dan menggambarkan masalah (misal: <em>Meja Kelas 10 RPL A Rusak</em>).</li>
+                      <li class="mb-2"><strong>Tentukan Kategori & Lokasi:</strong> Pilih kategori yang sesuai (Fasilitas, Akademik, atau Asrama) serta cantumkan lokasi ruangan secara spesifik.</li>
+                      <li class="mb-2"><strong>Uraikan Masalah:</strong> Ceritakan kronologi atau kondisi kerusakan di kolom deskripsi.</li>
+                      <li class="mb-2"><strong>Kirim:</strong> Klik tombol <em>Kirim Laporan</em> untuk mengirimkan data ke sistem database sekolah.</li>
+                    </ol>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
+
+              <!-- Accordion Item 2 -->
+              <div class="accordion-item border rounded-3 mb-3 overflow-hidden shadow-none">
+                <h2 class="accordion-header" id="headingGuideTwo">
+                  <button
+                    class="accordion-button collapsed fw-semibold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseGuideTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseGuideTwo"
+                  >
+                    <i class="fa-solid fa-camera-retro text-primary me-2"></i> 2. Ketentuan Unggah Foto Bukti
+                  </button>
+                </h2>
+                <div
+                  id="collapseGuideTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingGuideTwo"
+                  data-bs-parent="#accordionGuide"
+                >
+                  <div class="accordion-body text-secondary lh-lg">
+                    <p class="mb-2">Menyertakan foto bukti sangat membantu tim sarana prasarana sekolah mengidentifikasi tingkat urgensi dan peralatan yang dibutuhkan untuk perbaikan:</p>
+                    <ul class="ps-3 mb-0">
+                      <li>Pastikan foto diambil dalam pencahayaan yang cukup dan fokus tajam.</li>
+                      <li>Perlihatkan bagian kerusakan utama serta konteks lingkungan sekitar objek.</li>
+                      <li>Format file yang didukung: <strong>JPG, JPEG, PNG</strong> dengan ukuran file maksimal <strong>5 MB</strong>.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Accordion Item 3 -->
+              <div class="accordion-item border rounded-3 mb-3 overflow-hidden shadow-none">
+                <h2 class="accordion-header" id="headingGuideThree">
+                  <button
+                    class="accordion-button collapsed fw-semibold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseGuideThree"
+                    aria-expanded="false"
+                    aria-controls="collapseGuideThree"
+                  >
+                    <i class="fa-solid fa-tags text-primary me-2"></i> 3. Kategori Masalah yang Dapat Dilaporkan
+                  </button>
+                </h2>
+                <div
+                  id="collapseGuideThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingGuideThree"
+                  data-bs-parent="#accordionGuide"
+                >
+                  <div class="accordion-body text-secondary lh-lg">
+                    <div class="row g-3">
+                      <div class="col-md-4">
+                        <div class="p-3 bg-light rounded-3 h-100">
+                          <h6 class="fw-bold text-primary"><i class="fa-solid fa-graduation-cap me-1"></i> Akademik</h6>
+                          <p class="small mb-0">Kendala proyektor ruang kelas, sound system belajar, papan tulis buram/retak, buku referensi perpustakaan, atau kebutuhan belajar mengajar lainnya.</p>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="p-3 bg-light rounded-3 h-100">
+                          <h6 class="fw-bold text-primary"><i class="fa-solid fa-bed me-1"></i> Asrama</h6>
+                          <p class="small mb-0">Kerusakan ranjang, lemari santri, AC/kipas angin mati di kamar, sanitasi air mati, atau lampu kamar mandi asrama.</p>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="p-3 bg-light rounded-3 h-100">
+                          <h6 class="fw-bold text-primary"><i class="fa-solid fa-screwdriver-wrench me-1"></i> Fasilitas Umum</h6>
+                          <p class="small mb-0">Kerusakan pintu gerbang, keran wudhu, fasilitas lab komputer, kursi praktikum, lapangan olahraga, atau stop kontak rusak.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Accordion Item 4 -->
+              <div class="accordion-item border rounded-3 mb-3 overflow-hidden shadow-none">
+                <h2 class="accordion-header" id="headingGuideFour">
+                  <button
+                    class="accordion-button collapsed fw-semibold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseGuideFour"
+                    aria-expanded="false"
+                    aria-controls="collapseGuideFour"
+                  >
+                    <i class="fa-solid fa-user-shield text-primary me-2"></i> 4. Kerahasiaan Identitas & Tanggung Jawab
+                  </button>
+                </h2>
+                <div
+                  id="collapseGuideFour"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingGuideFour"
+                  data-bs-parent="#accordionGuide"
+                >
+                  <div class="accordion-body text-secondary lh-lg">
+                    <p class="mb-2">
+                      Sistem E-Report IDN menjamin data privasi pelapor dilindungi sesuai etika dan regulasi sekolah. Pelapor diharapkan:
+                    </p>
+                    <ul class="ps-3 mb-0">
+                      <li>Menyampaikan keterangan secara jujur dan berdasarkan kejadian yang sesungguhnya terjadi.</li>
+                      <li>Tidak menggunakan kata-kata provokatif atau menyinggung SARA.</li>
+                      <li>Berkoordinasi dengan pengurus kelas atau wali kelas jika permasalahan bersifat mendesak.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
       </div>
     </section>
 
